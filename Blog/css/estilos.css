@@ -1,0 +1,201 @@
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.supa{
+    padding: 10px 0;
+    width: 15%;
+    align-items: left;
+}
+html {
+    scroll-behavior: smooth;
+}
+/*Posicion de la imagen inicial*/
+body {
+    font-family: 'open sans';
+	 background: url(../img/fondo3.jpg);
+	 background-size: cover;
+    background-attachment: fixed;
+	 position: relative;
+}
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 600px;
+    background: #333333;  
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd1818, #333333);  
+    /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to right, hsla(161, 50%, 50%, 0.692), hsla(0, 0%, 10%, 0.699)), url(../img/fondo.jpg);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color:#fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 30px;
+    color:#fff;
+}
+.textos-header h2{
+    font-size: 40px;
+    font-weight: 300;
+    color:#fff;
+}
+.textos-header h3{
+    color:#fff;
+}
+h3{
+	color:#fff
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Informacion */
+
+main .Informacion{
+    padding: 30px 0 60px 0;
+}
+.contenedor-informacion{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-informacion{
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+/*comienza aqui---------------------------------->*/
+/* Galeria */
+
+.portafolio{
+    background-image: radial-gradient(circle at 50% -20.71%, #ff65b3 0, #ff59c0 10%, #ff4ecd 20%, #ff45d9 30%, #ff3fe6 40%, #f23cf2 50%, #d33ffe 60%, #ad46ff 70%, #7b4fff 80%, #0058ff 90%, #0060ff 100%); /*color del fondo en este caso #fcfcfc representa blanco*/
+}
+
+.galeria-port{
+	
+    display: flex;   /*modo de diseño que permite acomodar los elementos de una pag web*/
+    justify-content: space-evenly;/*indoca que todos los recuadros creados tendran espacios equitativamente*/
+    flex-wrap: wrap;	/*permite acomodar los elementos si llegasen a sobrepasar los limites */
+	
+}
+
+.imagen-port{
+	/*forma para acomodar de manera equitativa las imagenes**/
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+	/*-------------------------------------------------------------*/
+}
+
+.imagen-port > img{ /*etiqueta para html, indica las funciones de llenado de imagen 100% cubre todo el espacio posible*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; /*modo de visualizacion*/
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;   /*medida de la imagen en animacion 100% siginifca que abarcara toda el recuadro*/
+    height: 100%;  
+    top: 0;
+    transform: scale(0); /*funcion a escala de una imagen efecto "zoom"*/
+    background: hsl(44, 94%, 51%,0.5); /*color del recuadro emergente en este caso aqua con 0.5 de transparencia*/
+    transition: transform .5s; /*tiempo en que tarde en transitar la imagen*/
+    display: flex; /*funcion de las dimenciones para abarcar todo el espacio posible*/
+    justify-content: center; /*centrar el contenido como las palabras o imagenes*/
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px; /*define el tamaño que debe de tener la imagen*/
+}
+
+.hover-galeria p{
+    color: #000000; /*Color de las letras dentro de la animacion*/
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+/*Termina aqui---------------------------------->*/
